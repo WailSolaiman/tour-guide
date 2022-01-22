@@ -47,7 +47,7 @@ const App = () => {
         setIsLoading(false)
       })
     }
-  }, [bounds, type])
+  }, [bounds, type, coordinates])
 
   return (
     <React.Fragment>
