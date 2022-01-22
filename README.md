@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Build an advanced Travel Companion Application using React, Material UI and Pigeon Maps. Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, data filtering and sorting based on rates.
+Build an advanced Travel Companion Application using React, Material UI and Pigeon Maps. Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, data filtering and sorting data based on rates.
 
 ## App Features
 
@@ -14,6 +14,8 @@ Build an advanced Travel Companion Application using React, Material UI and Pige
 [Open Weather Map API](https://rapidapi.com/community/api/open-weather-map)
 
 ## Website
+
+[https://react-tour-guide-wsolaiman.netlify.app/](https://react-tour-guide-wsolaiman.netlify.app/)
 
 ## Developer
 
