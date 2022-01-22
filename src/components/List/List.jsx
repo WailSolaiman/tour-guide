@@ -1,5 +1,4 @@
-// import { useState, useEffect, createRef } from "react"
-import { useState } from "react"
+import { useState, useEffect, createRef } from "react"
 import {
   CircularProgress,
   Grid,
@@ -13,63 +12,32 @@ import {
 import PlaceDetails from "../PlaceDetails/PlaceDetails"
 import useStyles from "./styles.js"
 
-const List = (
-  {
-    // places,
-    // type,
-    // setType,
-    // rating,
-    // setRating,
-    // childClicked,
-    // isLoading,
-  }
-) => {
-  // const [elRefs, setElRefs] = useState([])
-  const [type, setType] = useState("restaurants")
-  const [rating, setRating] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const places = [
-    {
-      name: "Cool Place",
-    },
-    {
-      name: "Best Beer",
-    },
-    {
-      name: "Best Steak",
-    },
-    {
-      name: "Cool Place",
-    },
-    {
-      name: "Best Beer",
-    },
-    {
-      name: "Best Steak",
-    },
-    {
-      name: "Cool Place",
-    },
-    {
-      name: "Best Beer",
-    },
-    {
-      name: "Best Steak",
-    },
-  ]
+const List = ({
+  places,
+  type,
+  setType,
+  rating,
+  setRating,
+  childClicked,
+  isLoading,
+}) => {
+  const [elRefs, setElRefs] = useState([])
+
   const classes = useStyles()
 
-  // useEffect(() => {
-  //   setElRefs((refs) =>
-  //     Array(places.length)
-  //       .fill()
-  //       .map((_, i) => refs[i] || createRef())
-  //   )
-  // }, [places])
+  useEffect(() => {
+    setElRefs((refs) =>
+      Array(places.length)
+        .fill()
+        .map((_, i) => refs[i] || createRef())
+    )
+  }, [places])
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">Food & Dining around you</Typography>
+      <Typography variant="h4">
+        Restaurants, hotels and landmarks around you.
+      </Typography>
       {isLoading ? (
         <div className={classes.loading}>
           <CircularProgress size="5rem" />
@@ -103,15 +71,10 @@ const List = (
           </FormControl>
           <Grid container spacing={3} className={classes.list}>
             {places?.map((place, i) => (
-              <Grid
-                // ref={elRefs[i]}
-                key={i}
-                item
-                xs={12}
-              >
+              <Grid ref={elRefs[i]} key={i} item xs={12}>
                 <PlaceDetails
-                  // selected={Number(childClicked) === i}
-                  // refProp={elRefs[i]}
+                  selected={Number(childClicked) === i}
+                  refProp={elRefs[i]}
                   place={place}
                 />
               </Grid>
