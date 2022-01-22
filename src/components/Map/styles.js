@@ -6,10 +6,10 @@ export default makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    width: "100px",
+    width: "150px",
   },
   mapContainer: {
-    height: "85vh",
+    height: "90vh",
     width: "100%",
   },
   markerContainer: {
@@ -17,8 +17,6 @@ export default makeStyles(() => ({
     transform: "translate(-50%, -50%)",
     zIndex: 1,
     "&:hover": { zIndex: 2 },
-  },
-  pointer: {
     cursor: "pointer",
   },
 }))
